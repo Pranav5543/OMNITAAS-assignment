@@ -12,6 +12,11 @@ app.use(cors()); // Allow all origins for debugging connection issues
 const VALID_USERNAME = "admin";
 const VALID_PASSWORD = "admin";
 
+// ─── Health Check ────────────────────────────────────────────────────────────
+app.get("/", (req, res) => {
+  res.send("Login Application Backend is running 1000%!");
+});
+
 // ─── POST /login ─────────────────────────────────────────────────────────────
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
