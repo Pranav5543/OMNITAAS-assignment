@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000";
 
 function Login() {
     const [username, setUsername] = useState("");

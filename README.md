@@ -57,6 +57,24 @@ npm run dev
 ```
 The application will be available at `http://localhost:5173`.
 
+## Deployment on Render
+
+This project is optimized for deployment on **Render**.
+
+### 1. Backend (Web Service)
+- **Root Directory**: `backend`
+- **Region**: (Choose your preferred region)
+- **Branch**: `main`
+- **Runtime**: `Node`
+- **Build Command**: `npm install`
+- **Start Command**: `node server.js`
+
+### 2. Frontend (Static Site)
+- **Root Directory**: `frontend`
+- **Build Command**: `npm run build`
+- **Publish Directory**: `dist`
+- **Environment Variable**: Add `VITE_API_URL` and set it to your **Backend Service URL**.
+
 ## Authentication Details
 - **Test Credentials**:
   - **Username**: `admin`
